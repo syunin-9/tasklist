@@ -21,10 +21,12 @@
                     <td>{{ $task->status }}</td>
                 </tr>
                 @endforeach
+                {{ $tasks->links('pagination::bootstrap-4') }}
             </tbody>
         </table>
     @endif
     
     {!! link_to_route('tasks.create', '新規タスクの作成', [], ['class' => 'btn btn-primary']) !!}
+    
 
 @endsection
